@@ -1,0 +1,104 @@
+Disassembly of section .text:
+00400000 <_start>:
+  400000:	f1000437	lui  s0, 0xF1000
+  400004:	f00004b7	lui  s1, 0xF0000
+  400008:	0fe00293	addi t0, zero, 254
+  40000c:	0054a423	sw   t0, 8(s1)
+  400010:	0004a023	sw   zero, 0(s1)
+
+00400014 <wait_trigger>:
+  400014:	0044a283	lw   t0, 4(s1)
+  400018:	0012f293	andi t0, t0, 1
+  40001c:	fe028ce3	beq  t0, zero, wait_trigger
+
+00400020 <read_co>:
+  400020:	00842283	lw   t0, 8(s0)
+  400024:	0022f293	andi t0, t0, 2
+  400028:	fe028ce3	beq  t0, zero, read_co
+  40002c:	00042423	sw   zero, 8(s0)
+  400030:	00442903	lw   s2, 4(s0)
+
+00400034 <read_h2>:
+  400034:	00842283	lw   t0, 8(s0)
+  400038:	0022f293	andi t0, t0, 2
+  40003c:	fe028ce3	beq  t0, zero, read_h2
+  400040:	00042423	sw   zero, 8(s0)
+  400044:	00442983	lw   s3, 4(s0)
+
+00400048 <read_temp>:
+  400048:	00842283	lw   t0, 8(s0)
+  40004c:	0022f293	andi t0, t0, 2
+  400050:	fe028ce3	beq  t0, zero, read_temp
+  400054:	00042423	sw   zero, 8(s0)
+  400058:	00442a03	lw   s4, 4(s0)
+
+0040005c <read_hum>:
+  40005c:	00842283	lw   t0, 8(s0)
+  400060:	0022f293	andi t0, t0, 2
+  400064:	fe028ce3	beq  t0, zero, read_hum
+  400068:	00042423	sw   zero, 8(s0)
+  40006c:	00442a83	lw   s5, 4(s0)
+  400070:	001a9293	slli t0, s5, 1
+  400074:	412282b3	sub  t0, t0, s2
+  400078:	413282b3	sub  t0, t0, s3
+  40007c:	414282b3	sub  t0, t0, s4
+  400080:	0002d463	bgez t0, z0_pos
+  400084:	00000293	addi t0, zero, 0
+
+00400088 <z0_pos>:
+  400088:	00028b13	addi s6, t0, 0
+  40008c:	00300313	addi t1, zero, 3
+  400090:	026902b3	mul  t0, s2, t1
+  400094:	00400313	addi t1, zero, 4
+  400098:	026983b3	mul  t2, s3, t1
+  40009c:	007282b3	add  t0, t0, t2
+  4000a0:	014282b3	add  t0, t0, s4
+  4000a4:	001a9313	slli t1, s5, 1
+  4000a8:	406282b3	sub  t0, t0, t1
+  4000ac:	f8828293	addi t0, t0, -120
+  4000b0:	0002d463	bgez t0, z1_pos
+  4000b4:	00000293	addi t0, zero, 0
+
+004000b8 <z1_pos>:
+  4000b8:	00028b93	addi s7, t0, 0
+  4000bc:	00191293	slli t0, s2, 1
+  4000c0:	00300313	addi t1, zero, 3
+  4000c4:	026a03b3	mul  t2, s4, t1
+  4000c8:	007282b3	add  t0, t0, t2
+  4000cc:	002a9313	slli t1, s5, 2
+  4000d0:	406282b3	sub  t0, t0, t1
+  4000d4:	f3828293	addi t0, t0, -200
+  4000d8:	0002d463	bgez t0, z2_pos
+  4000dc:	00000293	addi t0, zero, 0
+
+004000e0 <z2_pos>:
+  4000e0:	00028c13	addi s8, t0, 0
+  4000e4:	03804063	bgtz s8, is_fire
+  4000e8:	017b4863	blt  s6, s7, is_smold
+  4000ec:	00000513	addi a0, zero, 0
+  4000f0:	00000593	addi a1, zero, 0
+  4000f4:	0180006f	jal  zero, send_out
+
+004000f8 <is_smold>:
+  4000f8:	00100513	addi a0, zero, 1
+  4000fc:	00200593	addi a1, zero, 2
+  400100:	00c0006f	jal  zero, send_out
+
+00400104 <is_fire>:
+  400104:	00200513	addi a0, zero, 2
+  400108:	00600593	addi a1, zero, 6
+
+0040010c <send_out>:
+  40010c:	00b4a023	sw   a1, 0(s1)
+  400110:	00a42023	sw   a0, 0(s0)
+
+00400114 <wait_tx>:
+  400114:	00842283	lw   t0, 8(s0)
+  400118:	0042f293	andi t0, t0, 4
+  40011c:	fe028ce3	beq  t0, zero, wait_tx
+
+00400120 <wait_release>:
+  400120:	0044a283	lw   t0, 4(s1)
+  400124:	0012f293	andi t0, t0, 1
+  400128:	fe029ce3	bne  t0, zero, wait_release
+  40012c:	ee9ff06f	jal  zero, wait_trigger

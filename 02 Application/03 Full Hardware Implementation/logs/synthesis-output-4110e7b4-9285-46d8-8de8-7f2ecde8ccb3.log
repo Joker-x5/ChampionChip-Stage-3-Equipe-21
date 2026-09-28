@@ -1,0 +1,114 @@
+
+20260908-120743
+#######################################
+#Data / VBL SILICON synthesis starting for 2020
+[OpenLane_init]
+OpenLane v1.1.1 (3876562d27af3f6825a823941b1cab36f7eb6dc3)
+All rights reserved. (c) 2020-2024 Efabless Corporation and contributors.
+Available under the Apache License, version 2.0. See the LICENSE file for more details.
+
+[INFO]: Using configuration in 'OpenLane/designs/spm/config.json'...
+[INFO]: Process Design Kit: sky130A
+[INFO]: Set PDK Root using Volare. If you haven't downloaded it yet, try 'volare fetch'.
+[INFO]: PDK Root: /root/.volare/volare/sky130/versions/bdc9412b3e468c102d01b7cf6337be06ec6e9c9a
+[INFO]: Standard Cell Library: sky130_fd_sc_hd
+[INFO]: Optimization Standard Cell Library: sky130_fd_sc_hd
+[INFO]: Run Directory: /chipinventor/OpenLane/designs/spm/runs/RUN_2026.09.08_12.07.44
+[WARNING]: DIODE_INSERTION_STRATEGY is now deprecated; use GRT_REPAIR_ANTENNAS, DIODE_ON_PORTS and RUN_HEURISTIC_DIODE_INSERTION instead.
+[INFO]: DIODE_INSERTION_STRATEGY set to 3. Setting GRT_REPAIR_ANTENNAS to 1
+[INFO]: Saving runtime environment...
+[INFO]: Preparing LEF files for the nom corner...
+[INFO]: Preparing LEF files for the min corner...
+[INFO]: Preparing LEF files for the max corner...
+[WARNING]: PNR_SDC_FILE is not set. It is recommended to write a custom SDC file for the design. Defaulting to BASE_SDC_FILE
+[WARNING]: SIGNOFF_SDC_FILE is not set. It is recommended to write a custom SDC file for the design. Defaulting to BASE_SDC_FILE
+[INFO]: Running linter (Verilator) (log: OpenLane/designs/spm/runs/RUN_2026.09.08_12.07.44/logs/synthesis/linter.log)...
+[INFO]: 0 errors found by linter
+[WARNING]: 450 warnings found by linter
+[STEP 1]
+[INFO]: Running Synthesis (log: OpenLane/designs/spm/runs/RUN_2026.09.08_12.07.44/logs/synthesis/1-synthesis.log)...
+[ERROR]: during executing yosys script /chipinventor/OpenLane/scripts/yosys/synth.tcl
+[ERROR]: Log: OpenLane/designs/spm/runs/RUN_2026.09.08_12.07.44/logs/synthesis/1-synthesis.log
+[ERROR]: Last 10 lines:
+[INFO]: USING STRATEGY AREA 0
+
+56. Executing ABC pass (technology mapping using ABC).
+
+56.1. Extracting gate netlist of module `\top' to `/tmp/yosys-abc-QNo3v0/input.blif'..
+Extracted 163666 gates and 230401 wires to a netlist network with 66733 inputs and 66769 outputs.
+
+56.1.1. Executing ABC.
+ERROR: ABC: execution of command ""/nix/store/wq2q0njg3sx8wvj2akz7x1qxwyrv9xlr-yosys-abc/bin/abc" -s -f /tmp/yosys-abc-QNo3v0/abc.script 2>&1" failed: return code 137.
+child process exited abnormally
+
+[ERROR]: Creating issue reproducible...
+[INFO]: Saving runtime environment...
+OpenLane TCL Issue Packager
+
+EFABLESS CORPORATION AND ALL AUTHORS OF THE OPENLANE PROJECT SHALL NOT BE HELD
+LIABLE FOR ANY LEAKS THAT MAY OCCUR TO ANY PROPRIETARY DATA AS A RESULT OF USING
+THIS SCRIPT. THIS SCRIPT IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR
+CONDITIONS OF ANY KIND.
+
+BY USING THIS SCRIPT, YOU ACKNOWLEDGE THAT YOU FULLY UNDERSTAND THIS DISCLAIMER
+AND ALL IT ENTAILS.
+
+Parsing config file(s)…
+Setting up /chipinventor/OpenLane/designs/spm/runs/RUN_2026.09.08_12.07.44/issue_reproducible…
+Done.
+[INFO]: Reproducible packaged: Please tarball and upload 'OpenLane/designs/spm/runs/RUN_2026.09.08_12.07.44/issue_reproducible' if you're going to submit an issue.
+[ERROR]: Step 1 (synthesis) failed with error:
+-code 1 -level 0 -errorstack {INNER {invokeStk1 throw_error} CALL {run_tcl_script -tool yosys -no_consume /chipinventor/OpenLane/scripts/yosys/synth.tcl -indexed_log /chipinventor/OpenLane/designs/spm/runs/RUN_2026.09.08_12.07.44/logs/synthesis/1-synthesis.log} CALL {run_yosys_script /chipinventor/OpenLane/scripts/yosys/synth.tcl -indexed_log /chipinventor/OpenLane/designs/spm/runs/RUN_2026.09.08_12.07.44/logs/synthesis/1-synthesis.log} CALL {run_yosys -indexed_log /chipinventor/OpenLane/designs/spm/runs/RUN_2026.09.08_12.07.44/logs/synthesis/1-synthesis.log} CALL run_synthesis CALL {run_non_interactive_mode -design /chipinventor/OpenLane/designs/spm/}} -errorcode NONE -errorinfo {
+    while executing
+"throw_error"
+    (procedure "run_tcl_script" line 219)
+    invoked from within
+"run_tcl_script -tool yosys -no_consume {*}$args"
+    (procedure "run_yosys_script" line 2)
+    invoked from within
+"run_yosys_script $::env(SYNTH_SCRIPT) -indexed_log $arg_values(-indexed_log)"
+    (procedure "run_yosys" line 40)
+    invoked from within
+"run_yosys -indexed_log $log"
+    (procedure "run_synthesis" line 13)
+    invoked from within
+"run_synthesis"} -errorline 1
+[INFO]: Saving current set of views in 'OpenLane/designs/spm/runs/RUN_2026.09.08_12.07.44/results/final'...
+[INFO]: Generating final set of reports...
+[ERROR]: Failed to create manufacturability and metric reports:
+[ERROR]: Traceback (most recent call last):
+  File "/chipinventor/OpenLane/scripts/generate_reports.py", line 184, in <module>
+    cli()
+  File "/nix/store/8ywrzlq8yyqrif2sfvbgg8vsxhj80ry7-python3-3.11.9-env/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/8ywrzlq8yyqrif2sfvbgg8vsxhj80ry7-python3-3.11.9-env/lib/python3.11/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "/nix/store/8ywrzlq8yyqrif2sfvbgg8vsxhj80ry7-python3-3.11.9-env/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/8ywrzlq8yyqrif2sfvbgg8vsxhj80ry7-python3-3.11.9-env/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/chipinventor/OpenLane/scripts/generate_reports.py", line 51, in cli
+    report = Report(design, tag, design_name, params, run_path).get_report()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/chipinventor/OpenLane/scripts/report/report.py", line 809, in get_report
+    *self.extract_all_values(),
+     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/chipinventor/OpenLane/scripts/report/report.py", line 359, in extract_all_values
+    power_report = Artifact(
+                   ^^^^^^^^^
+  File "/chipinventor/OpenLane/scripts/report/report.py", line 62, in __init__
+    self.pathname = matches[0]
+                    ~~~~~~~^^^
+IndexError: list index out of range
+[INFO]: Saving runtime environment...
+[ERROR]: Flow failed.
+[INFO]: The failure may have been because of the following warnings:
+[WARNING]: DIODE_INSERTION_STRATEGY is now deprecated; use GRT_REPAIR_ANTENNAS, DIODE_ON_PORTS and RUN_HEURISTIC_DIODE_INSERTION instead.
+[WARNING]: PNR_SDC_FILE is not set. It is recommended to write a custom SDC file for the design. Defaulting to BASE_SDC_FILE
+[WARNING]: SIGNOFF_SDC_FILE is not set. It is recommended to write a custom SDC file for the design. Defaulting to BASE_SDC_FILE
+[WARNING]: 450 warnings found by linter
+

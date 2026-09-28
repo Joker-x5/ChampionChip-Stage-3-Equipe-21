@@ -1,0 +1,29 @@
+VCD info: dumpfile /var/www/html/beta/v1/editor/efs-users/2020/w/design/testbench/testbench.vcd opened for output.
+
+===============================================================================
+   CHAMPIONCHIP STAGE 3 APPLICATION FIRMWARE VALIDATION
+   Target Netlist: Stage 3/Application.v (Edge-AI Wildfire Node)
+===============================================================================
+[INFO] System reset released. CPU booted from firmware_memory (0x00400000).
+
+-------------------------------------------------------------------------------
+[EMU CLI] Executing: ./emu -d 0xFE -i 0x01 -t4 0x3c190a0f -r1 0 -o 0 (NORMAL)
+          Inputs: CO=15 ppm, H2=10 ppm, Temp=25 C, Hum=60 %
+[EMU PASS] Returned Class=0, GPIO Alarm=0 (Matched Expected)
+
+-------------------------------------------------------------------------------
+[EMU CLI] Executing: ./emu -d 0xFE -i 0x01 -t4 0x1e252328 -r1 1 -o 1 (SMOLDERING)
+          Inputs: CO=40 ppm, H2=35 ppm, Temp=37 C, Hum=30 %
+[EMU PASS] Returned Class=1, GPIO Alarm=1 (Matched Expected)
+
+-------------------------------------------------------------------------------
+[EMU CLI] Executing: ./emu -d 0xFE -i 0x01 -t4 0x0a4b4664 -r1 2 -o 3 (ACTIVE FIRE)
+          Inputs: CO=100 ppm, H2=70 ppm, Temp=75 C, Hum=10 %
+[EMU PASS] Returned Class=2, GPIO Alarm=3 (Matched Expected)
+
+===============================================================================
+   ALL 3 EMULATOR CASES PASSED 100% WITH HARDWARE ACCELERATION!
+   >>> APPLICATION.V IS 100% VERIFIED AND READY FOR AWS SYNTHESIS <<<
+===============================================================================
+
+/var/www/html/beta/v1/editor/efs-users/2020/w/design/testbench/testbench.v:226: $finish called at 1314140000 (1ps)
