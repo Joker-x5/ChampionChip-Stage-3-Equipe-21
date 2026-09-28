@@ -1,0 +1,29 @@
+
+20260908-114120
+#######################################
+#Data / VBL SILICON synthesis starting for 2020
+[OpenLane_init]
+OpenLane v1.1.1 (3876562d27af3f6825a823941b1cab36f7eb6dc3)
+All rights reserved. (c) 2020-2024 Efabless Corporation and contributors.
+Available under the Apache License, version 2.0. See the LICENSE file for more details.
+
+[INFO]: Using configuration in 'OpenLane/designs/spm/config.json'...
+[INFO]: Process Design Kit: sky130A
+[INFO]: Set PDK Root using Volare. If you haven't downloaded it yet, try 'volare fetch'.
+[INFO]: PDK Root: /root/.volare/volare/sky130/versions/bdc9412b3e468c102d01b7cf6337be06ec6e9c9a
+[INFO]: Standard Cell Library: sky130_fd_sc_hd
+[INFO]: Optimization Standard Cell Library: sky130_fd_sc_hd
+[INFO]: Run Directory: /chipinventor/OpenLane/designs/spm/runs/RUN_2026.09.08_11.41.21
+[WARNING]: DIODE_INSERTION_STRATEGY is now deprecated; use GRT_REPAIR_ANTENNAS, DIODE_ON_PORTS and RUN_HEURISTIC_DIODE_INSERTION instead.
+[INFO]: DIODE_INSERTION_STRATEGY set to 3. Setting GRT_REPAIR_ANTENNAS to 1
+[INFO]: Saving runtime environment...
+[INFO]: Preparing LEF files for the nom corner...
+[INFO]: Preparing LEF files for the min corner...
+[INFO]: Preparing LEF files for the max corner...
+[WARNING]: PNR_SDC_FILE is not set. It is recommended to write a custom SDC file for the design. Defaulting to BASE_SDC_FILE
+[WARNING]: SIGNOFF_SDC_FILE is not set. It is recommended to write a custom SDC file for the design. Defaulting to BASE_SDC_FILE
+[INFO]: Running linter (Verilator) (log: OpenLane/designs/spm/runs/RUN_2026.09.08_11.41.21/logs/synthesis/linter.log)...
+[INFO]: 0 errors found by linter
+[WARNING]: 450 warnings found by linter
+[STEP 1]
+[INFO]: Running Synthesis (log: OpenLane/designs/spm/runs/RUN_2026.09.08_11.41.21/logs/synthesis/1-synthesis.log)...

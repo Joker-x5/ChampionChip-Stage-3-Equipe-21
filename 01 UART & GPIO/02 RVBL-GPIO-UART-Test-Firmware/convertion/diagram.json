@@ -1,0 +1,542 @@
+{
+    "drawflow": {
+        "Home": {
+            "data": {
+                "3": {
+                    "id": 3,
+                    "name": "blk4650",
+                    "data": {
+                        "blkInputs": "clk_i, rst_i, addr_i[31:0], data_i[31:0], we_i, oe_i, rx_i",
+                        "blkOutputs": "data_o[31:0], tx_o",
+                        "blkInouts": "",
+                        "parameters": {
+                            "CLK_FREQ": "50_000_000",
+                            "BAUD_RATE": "115200",
+                            "AUTO_TX_ON_WRITE": "1"
+                        }
+                    },
+                    "class": "blk4650",
+                    "html": "\n    <div class=\"box\">\n      <center>\n        <img onload='updateConnectionList(editor.drawflow)' onload='updateConnectionList(editor.drawflow)' onload='updateConnectionList(editor.drawflow)' onload='updateConnectionList(editor.drawflow)' onload='updateConnectionList(editor.drawflow)' onload='updateConnectionList(editor.drawflow)' onload='updateConnectionList(editor.drawflow)' onload='updateConnectionList(editor.drawflow)' onload='updateConnectionList(editor.drawflow)' onload='updateConnectionList(editor.drawflow)' onload='updateConnectionList(editor.drawflow)' onload='updateConnectionList(editor.drawflow)' onload='updateConnectionList(editor.drawflow)' onload='updateConnectionList(editor.drawflow)' src=\"/beta/v1/admin/crud/assets/uploads/files/blockIcon-default.png\" width=\"100\">\n        <br>\n        <p><b>uart</b></p>\n        <div class=\"parameters\">\n          \n      <label>\n        CLK_FREQ\n        <input type=\"text\" df-parameters-CLK_FREQ value=\"50_000_000\" name=\"CLK_FREQ\" oninput=checkParameterInPorts(event)>\n      </label>\n    \n      <label>\n        BAUD_RATE\n        <input type=\"text\" df-parameters-BAUD_RATE value=\"115200\" name=\"BAUD_RATE\" oninput=checkParameterInPorts(event)>\n      </label>\n    \n      <label>\n        AUTO_TX_ON_WRITE\n        <input type=\"text\" df-parameters-AUTO_TX_ON_WRITE value=\"1\" name=\"AUTO_TX_ON_WRITE\" oninput=checkParameterInPorts(event)>\n      </label>\n    \n        </div>\n        <a href=\"#\" onclick=\"showInfoModal('Block', 4650); return false;\">[info]</a> \n        <a href=\"#\" onclick=\"showDetailsModal('Block', 4650); return false;\">[details]</a>\n      </center>\n    </div>\n  ",
+                    "typenode": false,
+                    "inputs": {
+                        "input_1": {
+                            "connections": [
+                                {
+                                    "node": "4",
+                                    "input": "output_1"
+                                }
+                            ]
+                        },
+                        "input_2": {
+                            "connections": [
+                                {
+                                    "node": "5",
+                                    "input": "output_1"
+                                }
+                            ]
+                        },
+                        "input_3": {
+                            "connections": [
+                                {
+                                    "node": "20",
+                                    "input": "output_5"
+                                }
+                            ]
+                        },
+                        "input_4": {
+                            "connections": [
+                                {
+                                    "node": "20",
+                                    "input": "output_6"
+                                }
+                            ]
+                        },
+                        "input_5": {
+                            "connections": [
+                                {
+                                    "node": "20",
+                                    "input": "output_2"
+                                }
+                            ]
+                        },
+                        "input_6": {
+                            "connections": [
+                                {
+                                    "node": "20",
+                                    "input": "output_3"
+                                }
+                            ]
+                        },
+                        "input_7": {
+                            "connections": [
+                                {
+                                    "node": "6",
+                                    "input": "output_1"
+                                }
+                            ]
+                        }
+                    },
+                    "outputs": {
+                        "output_1": {
+                            "connections": [
+                                {
+                                    "node": "20",
+                                    "output": "input_4",
+                                    "points": [
+                                        {
+                                            "pos_x": 1240.4850463867188,
+                                            "pos_y": 337.4568888346354
+                                        },
+                                        {
+                                            "pos_x": 1245.818359375,
+                                            "pos_y": 590.7902221679688
+                                        },
+                                        {
+                                            "pos_x": 222.10256347656247,
+                                            "pos_y": 591.4828521728516
+                                        },
+                                        {
+                                            "pos_x": 223.7025634765625,
+                                            "pos_y": 213.88283691406252
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "output_2": {
+                            "connections": [
+                                {
+                                    "node": "8",
+                                    "output": "input_1"
+                                }
+                            ]
+                        }
+                    },
+                    "inouts": {},
+                    "pos_x": 716,
+                    "pos_y": 165
+                },
+                "4": {
+                    "id": 4,
+                    "name": "input",
+                    "data": {
+                        "input_pin": "",
+                        "name101input": "clk_i"
+                    },
+                    "class": "input",
+                    "html": "\n          <div class=\"box\">\n            <p><b>Input Pin</b></p>\n            <input type=\"text\" df-name101input placeholder=\"\">\n          </div>\n        ",
+                    "typenode": false,
+                    "inputs": {},
+                    "outputs": {
+                        "output_1": {
+                            "connections": [
+                                {
+                                    "node": "3",
+                                    "output": "input_1",
+                                    "points": [
+                                        {
+                                            "pos_x": 643,
+                                            "pos_y": 24.800003051757812
+                                        }
+                                    ]
+                                },
+                                {
+                                    "node": "18",
+                                    "output": "input_1"
+                                },
+                                {
+                                    "node": "20",
+                                    "output": "input_1"
+                                }
+                            ]
+                        }
+                    },
+                    "inouts": {},
+                    "pos_x": -126,
+                    "pos_y": -21
+                },
+                "5": {
+                    "id": 5,
+                    "name": "input",
+                    "data": {
+                        "input_pin": "",
+                        "name101input": "rst_i"
+                    },
+                    "class": "input",
+                    "html": "\n          <div class=\"box\">\n            <p><b>Input Pin</b></p>\n            <input type=\"text\" df-name101input placeholder=\"\">\n          </div>\n        ",
+                    "typenode": false,
+                    "inputs": {},
+                    "outputs": {
+                        "output_1": {
+                            "connections": [
+                                {
+                                    "node": "3",
+                                    "output": "input_2",
+                                    "points": [
+                                        {
+                                            "pos_x": 233,
+                                            "pos_y": 307.8000030517578
+                                        }
+                                    ]
+                                },
+                                {
+                                    "node": "18",
+                                    "output": "input_2",
+                                    "points": [
+                                        {
+                                            "pos_x": 233.3867051866319,
+                                            "pos_y": -40.61113145616321
+                                        }
+                                    ]
+                                },
+                                {
+                                    "node": "20",
+                                    "output": "input_2"
+                                }
+                            ]
+                        }
+                    },
+                    "inouts": {},
+                    "pos_x": -143,
+                    "pos_y": 142
+                },
+                "6": {
+                    "id": 6,
+                    "name": "input",
+                    "data": {
+                        "input_pin": "",
+                        "name101input": "rx_i"
+                    },
+                    "class": "input",
+                    "html": "\n          <div class=\"box\">\n            <p><b>Input Pin</b></p>\n            <input type=\"text\" df-name101input placeholder=\"\">\n          </div>\n        ",
+                    "typenode": false,
+                    "inputs": {},
+                    "outputs": {
+                        "output_1": {
+                            "connections": [
+                                {
+                                    "node": "3",
+                                    "output": "input_7"
+                                }
+                            ]
+                        }
+                    },
+                    "inouts": {},
+                    "pos_x": 280.8888888888889,
+                    "pos_y": 388
+                },
+                "8": {
+                    "id": 8,
+                    "name": "output",
+                    "data": {
+                        "output_pin": "",
+                        "name101output": "tx_o"
+                    },
+                    "class": "output",
+                    "html": "\n          <div class=\"box\">\n            <p><b>Output pin</b></p>\n            <input type=\"text\" df-name101output placeholder=\"\">\n          </div>\n        ",
+                    "typenode": false,
+                    "inputs": {
+                        "input_1": {
+                            "connections": [
+                                {
+                                    "node": "3",
+                                    "input": "output_2"
+                                }
+                            ]
+                        }
+                    },
+                    "outputs": {},
+                    "inouts": {},
+                    "pos_x": 1375.090909090909,
+                    "pos_y": 311
+                },
+                "18": {
+                    "id": 18,
+                    "name": "blk4659",
+                    "data": {
+                        "blkInputs": "clk_i, rst_i, addr_i[31:0], data_i[31:0], we_i, oe_i, datain[7:0]",
+                        "blkOutputs": "data_o[31:0], datadir[7:0], dataout[7:0]",
+                        "blkInouts": "",
+                        "parameters": []
+                    },
+                    "class": "blk4659",
+                    "html": "\n    <div class=\"box\">\n      <center>\n        <img onload='updateConnectionList(editor.drawflow)' onload='updateConnectionList(editor.drawflow)' src=\"/beta/v1/admin/crud/assets/uploads/files/blockIcon-default.png\" width=\"100\">\n        <br>\n        <p><b>gpio</b></p>\n        <div class=\"parameters\">\n          \n        </div>\n        <a href=\"#\" onclick=\"showInfoModal('Block', 4659); return false;\">[info]</a> \n        <a href=\"#\" onclick=\"showDetailsModal('Block', 4659); return false;\">[details]</a>\n      </center>\n    </div>\n  ",
+                    "typenode": false,
+                    "inputs": {
+                        "input_1": {
+                            "connections": [
+                                {
+                                    "node": "4",
+                                    "input": "output_1"
+                                }
+                            ]
+                        },
+                        "input_2": {
+                            "connections": [
+                                {
+                                    "node": "5",
+                                    "input": "output_1"
+                                }
+                            ]
+                        },
+                        "input_3": {
+                            "connections": [
+                                {
+                                    "node": "20",
+                                    "input": "output_5"
+                                }
+                            ]
+                        },
+                        "input_4": {
+                            "connections": [
+                                {
+                                    "node": "20",
+                                    "input": "output_6"
+                                }
+                            ]
+                        },
+                        "input_5": {
+                            "connections": [
+                                {
+                                    "node": "20",
+                                    "input": "output_4"
+                                }
+                            ]
+                        },
+                        "input_6": {
+                            "connections": [
+                                {
+                                    "node": "20",
+                                    "input": "output_1"
+                                }
+                            ]
+                        },
+                        "input_7": {
+                            "connections": [
+                                {
+                                    "node": "19",
+                                    "input": "output_1"
+                                }
+                            ]
+                        }
+                    },
+                    "outputs": {
+                        "output_1": {
+                            "connections": [
+                                {
+                                    "node": "20",
+                                    "output": "input_3",
+                                    "points": [
+                                        {
+                                            "pos_x": 1312.1517028808594,
+                                            "pos_y": -20.309783935546875
+                                        },
+                                        {
+                                            "pos_x": 1313.4850260416667,
+                                            "pos_y": -104.87642415364587
+                                        },
+                                        {
+                                            "pos_x": 223.18834577287942,
+                                            "pos_y": -105.35714285714283
+                                        },
+                                        {
+                                            "pos_x": 221.3025634765625,
+                                            "pos_y": 193.88283691406252
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "output_2": {
+                            "connections": [
+                                {
+                                    "node": "19",
+                                    "output": "input_1"
+                                }
+                            ]
+                        },
+                        "output_3": {
+                            "connections": [
+                                {
+                                    "node": "19",
+                                    "output": "input_2"
+                                }
+                            ]
+                        }
+                    },
+                    "inouts": {},
+                    "pos_x": 781,
+                    "pos_y": -94
+                },
+                "19": {
+                    "id": 19,
+                    "name": "inout",
+                    "data": {
+                        "blkInputs": "C, D",
+                        "name101inout": "pins_io[7:0]"
+                    },
+                    "class": "inout",
+                    "html": "\n          <div class=\"box\">\n            <p><b>Inout Pin</b>\n            <input type=\"text\" df-name101inout placeholder=\"\">\n          </div>\n        ",
+                    "typenode": false,
+                    "inputs": {
+                        "input_1": {
+                            "connections": [
+                                {
+                                    "node": "18",
+                                    "input": "output_2"
+                                }
+                            ]
+                        },
+                        "input_2": {
+                            "connections": [
+                                {
+                                    "node": "18",
+                                    "input": "output_3"
+                                }
+                            ]
+                        }
+                    },
+                    "outputs": {
+                        "output_1": {
+                            "connections": [
+                                {
+                                    "node": "18",
+                                    "output": "input_7",
+                                    "points": [
+                                        {
+                                            "pos_x": 1592.275611029731,
+                                            "pos_y": 10.499979654947879
+                                        },
+                                        {
+                                            "pos_x": 1593.386722140842,
+                                            "pos_y": 127.16664632161456
+                                        },
+                                        {
+                                            "pos_x": 754.4978332519531,
+                                            "pos_y": 127.16664632161456
+                                        },
+                                        {
+                                            "pos_x": 752.275611029731,
+                                            "pos_y": 60.499979654947936
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    "inouts": {},
+                    "pos_x": 1362,
+                    "pos_y": -34.888888888888886
+                },
+                "20": {
+                    "id": 20,
+                    "name": "blk4658",
+                    "data": {
+                        "blkInputs": "clk_i, rst_i, gpio[31:0], uart[31:0]",
+                        "blkOutputs": "gpio_oe_o, uart_we_o, uart_oe_o, gpio_we_o, address_o[31:0], data_o[31:0]",
+                        "blkInouts": "",
+                        "parameters": []
+                    },
+                    "class": "blk4658",
+                    "html": "\n    <div class=\"box\">\n      <center>\n        <img onload='updateConnectionList(editor.drawflow)' src=\"/beta/v1/admin/crud/assets/uploads/files/blockIcon-default.png\" width=\"100\">\n        <br>\n        <p><b>Stage3_RISCV</b></p>\n        <div class=\"parameters\">\n          \n        </div>\n        <a href=\"#\" onclick=\"showInfoModal('Block', 4658); return false;\">[info]</a> \n        <a href=\"#\" onclick=\"showDetailsModal('Block', 4658); return false;\">[details]</a>\n      </center>\n    </div>\n  ",
+                    "typenode": false,
+                    "inputs": {
+                        "input_1": {
+                            "connections": [
+                                {
+                                    "node": "4",
+                                    "input": "output_1"
+                                }
+                            ]
+                        },
+                        "input_2": {
+                            "connections": [
+                                {
+                                    "node": "5",
+                                    "input": "output_1"
+                                }
+                            ]
+                        },
+                        "input_3": {
+                            "connections": [
+                                {
+                                    "node": "18",
+                                    "input": "output_1"
+                                }
+                            ]
+                        },
+                        "input_4": {
+                            "connections": [
+                                {
+                                    "node": "3",
+                                    "input": "output_1"
+                                }
+                            ]
+                        }
+                    },
+                    "outputs": {
+                        "output_1": {
+                            "connections": [
+                                {
+                                    "node": "18",
+                                    "output": "input_6"
+                                }
+                            ]
+                        },
+                        "output_2": {
+                            "connections": [
+                                {
+                                    "node": "3",
+                                    "output": "input_5"
+                                }
+                            ]
+                        },
+                        "output_3": {
+                            "connections": [
+                                {
+                                    "node": "3",
+                                    "output": "input_6"
+                                }
+                            ]
+                        },
+                        "output_4": {
+                            "connections": [
+                                {
+                                    "node": "18",
+                                    "output": "input_5"
+                                }
+                            ]
+                        },
+                        "output_5": {
+                            "connections": [
+                                {
+                                    "node": "3",
+                                    "output": "input_3"
+                                },
+                                {
+                                    "node": "18",
+                                    "output": "input_3"
+                                }
+                            ]
+                        },
+                        "output_6": {
+                            "connections": [
+                                {
+                                    "node": "18",
+                                    "output": "input_4"
+                                },
+                                {
+                                    "node": "3",
+                                    "output": "input_4"
+                                }
+                            ]
+                        }
+                    },
+                    "inouts": {},
+                    "pos_x": 265.57142857142856,
+                    "pos_y": 90
+                }
+            }
+        }
+    }
+}

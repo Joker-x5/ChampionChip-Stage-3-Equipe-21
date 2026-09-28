@@ -1,0 +1,19 @@
+VCD info: dumpfile /var/www/html/beta/v1/editor/efs-users/2020/w/design/testbench/testbench.vcd opened for output.
+
+===============================================================================
+   CHAMPIONCHIP STAGE 3 UART SERIAL CONTROLLER VERIFICATION
+   Specification Reference: BlockGuide_Stage3_Part1.pdf (Section 2)
+===============================================================================
+[PASS] Test 1: Reset State - tx_o=1 (idle high), TXDONE=1 (ready), RXDONE=0, TRANSMIT=0
+[PASS] Test 2: UART TX via TRANSMIT bit - 8-N-1 frame 0xA5 validated, TXDONE=1
+[PASS] Test 3: UART Auto-TX on TXDATA write - Compatible with Sec 2.3.3 code (0x3C)
+[PASS] Test 4: UART RX - Received 0x5A, RXDONE set and cleared via software write 0
+[PASS] Test 5: Glitch Rejection - False start bit spike (< half bit) successfully filtered out
+[PASS] Test 6: Full-Duplex Loopback - Transmitted & received 0xE7 concurrently
+
+===============================================================================
+   UART TEST SUMMARY: 6 Total | 6 Passed | 0 Failed
+   OVERALL STATUS: >>> UART REQUIREMENTS 100% PASSED <<<
+===============================================================================
+
+/var/www/html/beta/v1/editor/efs-users/2020/w/design/testbench/testbench.v:330: $finish called at 400990000 (1ps)
