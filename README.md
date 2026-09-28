@@ -1,6 +1,6 @@
-===============================================================================
+README
+
 CHAMPIONCHIP STAGE 3 - PROJECT FILE DIRECTORY GUIDE
-===============================================================================
 
 This directory contains the design files, firmware builders, testbenches, and 
 hardware implementation packages for Stage 3.
